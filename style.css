@@ -53,11 +53,15 @@ li a:hover {
     background-color: lightgrey;
     color: darkslategrey;
 }
-.table{
+.gallery{
     max-width: 100%;
     padding: 5px 10px;
+    margin-bottom: 30px;
     margin-left: 10%;
     overflow: scroll;
+}
+.table, td, th{
+    border: 1px solid black;
 }
 .footer {
   position: fixed;
