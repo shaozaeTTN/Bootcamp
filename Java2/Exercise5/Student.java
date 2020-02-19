@@ -1,4 +1,4 @@
-package Java2;
+package Java2.Exercise5;
 
 // 5. WAP to show object cloning in java using cloneable and copy constructor both.
 
@@ -32,7 +32,7 @@ public class Student {
 class StudentDriver {
     public static void main(String[] args) {
 // Original student object
-        Student student = new Student(1, "Shayan", "CSE");
+        Student student = new Student(1, "Vishodu", "CSE");
         System.out.println("Original student object:");
         student.showDetails();
 

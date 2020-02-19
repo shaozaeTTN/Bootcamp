@@ -1,4 +1,4 @@
-package Java2;
+package Java2.Exercise5;
 
 // 5. WAP to show object cloning in java using cloneable and copy constructor both.
 
@@ -31,7 +31,7 @@ class driver {
     public static void main(String[] args) throws CloneNotSupportedException{
 
 // Original object
-        Employee employeeOne = new Employee(1, "Shayan", "AMC");
+        Employee employeeOne = new Employee(1, "Vishodu", "AMC");
         System.out.println("Original object:");
         employeeOne.showDetails();
 
