@@ -21,7 +21,7 @@ class Cashier  {
     static int count=0;
     static Queue<Integer> orderIdList=new PriorityQueue<>() ;
     static Queue<Integer> completedorderIdList=new PriorityQueue<>();
-    public int PaymentGenerateToken (int pay,String orderItem) {
+    public int paymentGenerateToken (int pay,String orderItem) {
         boolean paymentReceived;
         if(pay>0)
         {
@@ -56,7 +56,7 @@ class Customer {
         Scanner sc=new Scanner(System.in);
         String item=sc.next();
         int pay=sc.nextInt();//user will give the payment
-        return new Cashier().PaymentGenerateToken(pay,item);
+        return new Cashier().paymentGenerateToken(pay,item);
     }
 
 }

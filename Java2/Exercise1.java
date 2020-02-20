@@ -4,7 +4,7 @@ package Java2;
 Use OOPs concepts in your design.Also try to use interfaces and abstract classes.
  */
 
-class books {
+class Books {
 
     public void display() {
 
@@ -16,7 +16,7 @@ class books {
 
 //inheritance
 
-class Chapters extends books {
+class Chapters extends Books {
 
     @Override
 
@@ -84,7 +84,7 @@ public class Exercise1 {
 
     public static void main(String[] args) {
 
-        books a=new books();
+        Books a=new Books();
 
         a.display();
 

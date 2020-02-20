@@ -27,7 +27,7 @@ public class Employee implements Cloneable {
     }
 }
 
-class driver {
+class Driver {
     public static void main(String[] args) throws CloneNotSupportedException{
 
 // Original object

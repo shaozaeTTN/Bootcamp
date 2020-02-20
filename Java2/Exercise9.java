@@ -4,7 +4,7 @@ package Java2;
 9.Design classes having attributes for furniture where there are wooden chairs and tables, metal chairs and tables.
  There are stress and fire tests for each products.
  */
-class furniture{
+class Furniture{
     String name;
     String stressResult;
     String fireResult;
@@ -16,7 +16,7 @@ class furniture{
         System.out.println(name + " has " + fireResult + " the firetest.");
     }
 }
-class WoodenChairs extends furniture{
+class WoodenChairs extends Furniture{
     WoodenChairs(String n, String stress, String fire){
         name = n;
         stressResult = stress;
@@ -24,21 +24,21 @@ class WoodenChairs extends furniture{
     }
 
 }
-class WoodenTables extends furniture{
+class WoodenTables extends Furniture{
     WoodenTables(String n, String stress, String fire){
         name = n;
         stressResult = stress;
         fireResult = fire;
     }
 }
-class MetalChairs extends furniture{
+class MetalChairs extends Furniture{
     MetalChairs(String n, String stress, String fire){
         name = n;
         stressResult = stress;
         fireResult = fire;
     }
 }
-class MetalTables extends furniture{
+class MetalTables extends Furniture{
     MetalTables(String n, String stress, String fire){
         name = n;
         stressResult = stress;
