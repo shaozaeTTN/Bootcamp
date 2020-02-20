@@ -3,6 +3,7 @@ package Threading;
 
 import java.util.concurrent.*;
 
+//Write a program to demonstrate the use of CountDownLatch
 
 public class Exercise9 {
 
@@ -36,9 +37,9 @@ public class Exercise9 {
     public static void main(String[] args) {
         CountDownLatch latch = new CountDownLatch(3);
 
-        new Thread(new ProcessThread("Worker1", latch, 2000)).start(); // time in millis.. 2 secs
-        new Thread(new ProcessThread("Worker2", latch, 6000)).start();//6 secs
-        new Thread(new ProcessThread("Worker3", latch, 4000)).start();//4 secs
+        new Thread(new ProcessThread("Worker1", latch, 2000)).start();
+        new Thread(new ProcessThread("Worker2", latch, 3000)).start();
+        new Thread(new ProcessThread("Worker3", latch, 4000)).start();
 
 
         System.out.println("waiting for Child(ren) process(es) to finish...");

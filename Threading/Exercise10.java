@@ -1,53 +1,48 @@
 package Threading;
 
+//Write a program which creates deadlock between 2 threads
 
 public class Exercise10 {
-    static Object ObjectLock1 = new Object();
-    static Object ObjectLock2 = new Object();
+    public static void main(String[] args){
+        final Object resource1 = "resource1";
+        final Object resource2 = "resource2";
 
-    private static class ThreadName1 extends Thread {
-        public void run() {
-            synchronized (ObjectLock1) {
-                System.out.println("Thread 1: Has  ObjectLock1");
+        Thread t1 = new Thread() {
+            public void run() {
+                synchronized(resource1){
+                    System.out.println("Thread 1: locked resource 1");
 
-                try {
-                    Thread.sleep(100);
-                }
-                catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                System.out.println("Thread 1: Waiting for ObjectLock 2");
+                    try{
+                        Thread.sleep(50);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
 
-                synchronized (ObjectLock2) {
-                    System.out.println("Thread 1: No DeadLock");
+                    synchronized(resource2){
+                        System.out.println("Thread 1: locked resource 2");
+                    }
                 }
             }
-        }
-    }
-    private static class ThreadName2 extends Thread {
-        public void run() {
-            synchronized (ObjectLock2) {
-                System.out.println("Thread 2: Has  ObjectLock2");
+        };
 
-                try {
-                    Thread.sleep(100);
-                }
-                catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-                System.out.println("Thread 2: Waiting for ObjectLock 1");
-           
-                synchronized (ObjectLock1) {
-                    System.out.println("Thread 2: No DeadLock");
+
+        Thread t2 = new Thread(){
+            public void run(){
+                synchronized(resource2){
+                    System.out.println("Thread 2: locked resource 2");
+
+                    try{
+                        Thread.sleep(50);
+                    } catch (InterruptedException e){
+                        e.printStackTrace();
+                    }
+                    synchronized(resource1){
+                        System.out.println("Thread 2: locked resource 1");
+                    }
                 }
             }
-        }
-    }
-
-    public static void main(String args[]) {
-        ThreadName1 thread1 = new ThreadName1();
-        ThreadName2 thread2 = new ThreadName2();
-        thread1.start();
-        thread2.start();
+        };
+        t1.start();
+        t2.start();
     }
 }
