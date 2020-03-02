@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-public class First {
+public class    First {
 
     public static void main(String[] args) {
 
@@ -58,15 +58,15 @@ public class First {
         }
     }
 
-    public Boolean isPallindrome(String origString) {
-        Boolean isPallindrome = false;
+    public Boolean isPalindrome(String origString) {
+        Boolean isPalindrome = false;
         String reverseString = new StringBuilder(origString).reverse().toString();
 
         // Check palindrome string
         if (origString.equals(reverseString)) {
-            isPallindrome = true;
+            isPalindrome = true;
         }
-        return isPallindrome;
+        return isPalindrome;
     }
 }
 
