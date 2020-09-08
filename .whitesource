@@ -1,6 +1,6 @@
 {
   "scanSettings": {
-    "baseBranches": []
+    "baseBranches": ["Java1","Java2","Collections"]
   },
   "checkRunSettings": {
     "vulnerableCheckRunConclusionLevel": "failure",
